@@ -1,6 +1,7 @@
 import { View, Text } from 'react-native'
 import React from 'react'
 import Hooks from './Hooks'
+import Flatlist from './Flatlist'
 
 const App = () => {
   return (
@@ -8,7 +9,7 @@ const App = () => {
       flex: 1,
       
 }}>
-      <Hooks/>
+      <Flatlist/>
     </View>
   )
 }
