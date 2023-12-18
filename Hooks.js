@@ -1,9 +1,22 @@
 import { View, Text,TouchableOpacity } from 'react-native'
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 
 let counter=0;
 const Hooks = () => {
         const[value,valueSet]=useState(0);
+
+        //! useeffect runs everytime screen loads automatically
+        // useEffect(()=>{
+        //         console.log("hello"); //runs everytime
+        // })
+
+        // useEffect(()=>{
+        //         console.log("hello1");  // runs only when screen loads
+        // },[])
+
+        // useEffect(()=>{
+        //         console.log("hello2");   //runs when desired functionality is changed
+        // },[value])
         return (
                 <View
                         style={{
