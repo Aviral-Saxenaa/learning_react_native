@@ -8,27 +8,22 @@ import Hello from "./screens/Hello";
 import HomeScreen from "./screens/HomeScreen";
 import { createDrawerNavigator } from "@react-navigation/drawer";
 import CustomDrawerContent from "./screens/CustomDrawerContent";
+import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 
-const Drawer = createDrawerNavigator();
+const Tab = createBottomTabNavigator();
 
 const App = () => {
         //! READ THE DOCS
 
         return (
                 <NavigationContainer>
-                        <Drawer.Navigator
-                                initialRouteName="Home"
-                                
-                                drawerContent={(props) => (
-                                        <CustomDrawerContent {...props} />
-                                )}
-                        >
-                                <Drawer.Screen
-                                        name="Home"
-                                        component={HomeScreen}
-                                />
-                                <Drawer.Screen name="Hello" component={Hello} />
-                        </Drawer.Navigator>
+                <Tab.Navigator>
+                        <Tab.Screen name="Home" component={HomeScreen} />
+                        <Tab.Screen
+                                name="Hello"
+                                component={Hello}
+                        />
+                </Tab.Navigator>
                 </NavigationContainer>
         );
 };

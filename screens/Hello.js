@@ -3,11 +3,10 @@ import React from 'react'
 
 //! READ THE DOCS
 
-const Hello = ({route,navigation}) => {
-  const{maindetail}=route.params;
+const Hello = ({navigation}) => {
   return (
     <View style={{flex:1,alignItems:"center",justifyContent:"center"}}>
-      <Text style={{fontSize:20 , color:"blue"}}>{maindetail}</Text>
+      <Text style={{fontSize:20 , color:"blue"}}>Hello</Text>
       <Button  onPress={()=>navigation.goBack()}
         title="goback"
       />
