@@ -8,9 +8,7 @@ const Hello = ({route,navigation}) => {
   return (
     <View style={{flex:1,alignItems:"center",justifyContent:"center"}}>
       <Text style={{fontSize:20 , color:"blue"}}>{maindetail}</Text>
-      <Button  onPress={()=>{
-        navigation.navigate('Home')
-      }}
+      <Button  onPress={()=>navigation.goBack()}
         title="goback"
       />
     </View>
